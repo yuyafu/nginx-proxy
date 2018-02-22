@@ -1,0 +1,44 @@
+serverAliveInterval 60
+
+Host test
+     HostName 192.168.18.168
+     Port 22
+     User work
+
+Host node1
+     HostName 106.14.175.46
+     Port 22
+     User root
+     IdentityFile ~/.ssh/id_rsa
+     ProxyCommand ssh work@test -W %h:%p
+
+Host node2
+     HostName 101.132.167.92
+     Port 22
+     User root
+     IdentityFile ~/.ssh/id_rsa
+     ProxyCommand ssh work@test -W %h:%p
+
+Host node3
+     HostName 101.132.166.115
+     Port 22
+     User root
+     ProxyCommand ssh work@test -W %h:%p
+
+Host node4
+     HostName 47.100.12.239
+     Port 22
+     User root
+     ProxyCommand ssh work@test -W %h:%p
+
+Host node5
+     HostName 101.132.195.8
+     Port 22
+     User root
+     ProxyCommand ssh work@test -W %h:%p
+
+Host node6
+     HostName 101.132.129.186
+     Port 22
+     User root
+     ProxyCommand ssh work@test -W %h:%p
